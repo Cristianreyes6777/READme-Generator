@@ -1,8 +1,10 @@
 // packages
 
 const fs = require("fs");
-const inquire = require("inquirer");
+const inquirer = require("inquirer");
 const path = require("path");
+const { generateReadme, writeToFile } = require("./utils/generateREADme");
+
 
 
 // prompts
@@ -33,9 +35,18 @@ const questions = [
         message: 'List your collaborators, any third-party assets used, and any tutorials you followed.'
     },
     {
-        type: 'input',
+        type: 'checkbox',
         name: 'license',
-        message: 'What is the license for this project?'
+        message: 'What is the license for this project?',
+        choices: [
+            "MIT",
+            "APACHE2.0",
+            "Boost1.0",
+            "MPL2.0",
+            "BSD2",
+            "BSD3",
+            "none"
+        ]
     },
     {
         type: 'input',
@@ -60,16 +71,17 @@ const questions = [
 ];
 
   
-  // Writing README.md File
-  function writeToFile(fileName, data) {
-    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
-  }
-  
-  // Initializing app
-  function init() {
-    inquirer.prompt(questions).then((responses) => {
-      console.log("Creating Professional README.md File...");
-      writeToFile("./dist/README.md", generateMarkdown({ ...responses }));
-    });
-  }
-  init();
+const init = () => {
+    inquirer
+        .prompt(questions)
+        .then((answers) => {
+            const readmeContent = generateReadme(answers);
+            const outputPath = path.join(__dirname, "new readme", "README.md"); // Set the desired output path
+            writeToFile(outputPath, readmeContent);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+};
+
+init();
