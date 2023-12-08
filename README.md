@@ -4,7 +4,7 @@
 ## Description
 
 
-The Node.js Challenge: Professional README Generator is a command-line application designed to simplify the process of creating high-quality README files for open-source projects hosted on GitHub. With this tool, developers can quickly generate comprehensive README.md files by providing input via the command line. The generated README includes sections for project descriptions, installation instructions, usage guidelines, contribution details, testing procedures, licensing information, and contact information.
+This professional README Generator is a command-line application designed to simplify the process of creating high-quality README files for open-source projects hosted on GitHub. With this tool, developers can quickly generate comprehensive README.md files by providing input via the command line. The generated README includes sections for project descriptions, installation instructions, usage guidelines, contribution details, testing procedures, licensing information, and contact information.
 
 This application leverages the Inquirer package to prompt users for essential project information and then generates a professional README.md file based on their responses. By automating the README creation process, developers can focus more on their project's development and less on documentation
 
