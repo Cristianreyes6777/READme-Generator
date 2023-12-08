@@ -35,18 +35,21 @@ const questions = [
         message: 'List your collaborators, any third-party assets used, and any tutorials you followed.'
     },
     {
-        type: 'checkbox',
+    
+        type: 'list', // Change to 'list' type for license selection
         name: 'license',
         message: 'What is the license for this project?',
         choices: [
-            "MIT",
-            "APACHE2.0",
-            "Boost1.0",
-            "MPL2.0",
-            "BSD2",
-            "BSD3",
-            "none"
+            "MIT License",
+            "Apache License 2.0",
+            "Boost Software License 1.0",
+            "Mozilla Public License 2.0",
+            "BSD 2-Clause License",
+            "BSD 3-Clause License",
+            "None"
         ]
+        
+        
     },
     {
         type: 'input',

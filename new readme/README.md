@@ -24,7 +24,7 @@
 
 
 ## License
-
+Mozilla Public License 2.0
 
 ## Features
 
