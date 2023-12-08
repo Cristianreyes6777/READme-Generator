@@ -18,7 +18,26 @@ function renderLicenseBadge(license) {
         default:
             return "";
     }
-    
+}
+
+// Function to render the license link
+function renderLicenseLink(license) {
+    if (!license) {
+        return "";
+    }
+  
+    switch (license) {
+        case "MIT License":
+            return "https://opensource.org/licenses/MIT";
+        case "Apache License 2.0":
+            return "https://opensource.org/licenses/Apache-2.0";
+        case "GNU General Public License v3.0":
+            return "https://www.gnu.org/licenses/gpl-3.0";
+        case "Mozilla Public License 2.0":
+            return "https://www.mozilla.org/en-US/MPL/2.0/";
+        default:
+            return "";
+    }
 }
 
 const generateReadme = (answers) => {
@@ -48,7 +67,9 @@ ${answers.usage}
 ${answers.credits}
 
 ## License
-${answers.license}
+${renderLicenseBadge(answers.license)}
+
+[License Information](${renderLicenseLink(answers.license)})
 
 ## Features
 ${answers.features}
