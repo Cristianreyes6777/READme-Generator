@@ -35,10 +35,9 @@ https://drive.google.com/file/d/1IapAN_Btc5i6X-HmNCSBHelpsVtV71i9/view
 ## Getting Started
 
 Clone the repository to your local machine.
-Open the index.html file in your preferred browser.
-Search a city by name, such as "New York". Then you will get the data pulled from the OpenWeather API.
+getting a backend server going
+input the appropriate information when prompted
 
-Or visit: https://cristianreyes6777.github.io/Weather-Application/
 
 ## Usage
 1. Clone the starter code repository from the provided link.
